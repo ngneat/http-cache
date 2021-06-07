@@ -1,6 +1,6 @@
 import { HttpParams } from '@angular/common/http';
 import { cloneWithoutParams } from '../cloneWithoutParams';
-import { CustomHttpParamsCodec, httpRequest } from './mocks.spec';
+import { CustomHttpParamsCodec, httpRequest } from './mocks/mocks';
 
 describe('cloneWithoutParams', () => {
   let request = (params, method = 'GET', url = 'api/mock') =>

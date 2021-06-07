@@ -1,5 +1,5 @@
 import { DefaultHttpCacheStorage } from '../httpCacheStorage';
-import { httpResponse } from './mocks.spec';
+import { httpResponse } from './mocks/mocks';
 
 describe('httpCacheStorage', () => {
   let storage: DefaultHttpCacheStorage;

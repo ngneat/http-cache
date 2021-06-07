@@ -1,5 +1,5 @@
 import { defaultConfig } from '../httpCacheConfig';
-import { httpResponse, localStorageMock } from './mocks.spec';
+import { httpResponse, localStorageMock } from './mocks/mocks';
 import { HttpCacheLocalStorage } from '../localstorage/httpCacheLocalStorage';
 
 describe('httpCacheLocalStorage', () => {

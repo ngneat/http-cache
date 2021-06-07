@@ -1,12 +1,12 @@
 import { HttpRequest, HttpResponse, HttpHeaders, HttpParams, HttpParameterCodec } from '@angular/common/http';
-import { CacheBucket } from '../cacheBucket';
-import { defaultConfig } from '../httpCacheConfig';
-import { DefaultHttpCacheGuard } from '../httpCacheGuard';
-import { HttpCacheManager } from '../httpCacheManager.service';
-import { DefaultHttpCacheStorage } from '../httpCacheStorage';
-import { DefaultKeySerializer } from '../keySerializer';
-import { RequestsQueue } from '../requestsQueue';
-import { DefaultTTLManager } from '../ttlManager';
+import { CacheBucket } from '../../cacheBucket';
+import { defaultConfig } from '../../httpCacheConfig';
+import { DefaultHttpCacheGuard } from '../../httpCacheGuard';
+import { HttpCacheManager } from '../../httpCacheManager.service';
+import { DefaultHttpCacheStorage } from '../../httpCacheStorage';
+import { DefaultKeySerializer } from '../../keySerializer';
+import { RequestsQueue } from '../../requestsQueue';
+import { DefaultTTLManager } from '../../ttlManager';
 
 export interface HttpOptions {
   headers?: HttpHeaders;

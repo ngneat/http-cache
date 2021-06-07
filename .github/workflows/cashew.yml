@@ -1,0 +1,45 @@
+name: '@ngneat/cashew'
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: true
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v1
+        id: npm-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-v1-npm-${{ hashFiles('./package-lock.json') }}
+          restore-keys: ${{ runner.os }}-v1-npm
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.15
+
+      - name: Install dependencies
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        env:
+          HUSKY_SKIP_INSTALL: 'true'
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run unit tests
+        run: npm run test:lib
+
+      - name: Build library
+        run: npm run build:lib
+
+      - name: Build playground app in production mode
+        run: npm run build:integration

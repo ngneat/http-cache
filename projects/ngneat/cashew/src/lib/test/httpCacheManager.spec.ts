@@ -10,7 +10,7 @@ import {
   httpCacheGuard,
   ttlManager as makeTTL,
   cacheBucket
-} from './mocks.spec';
+} from './mocks/mocks';
 import Spy = jasmine.Spy;
 
 describe('HttpCacheManager', () => {

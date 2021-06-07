@@ -1,5 +1,5 @@
 import { DefaultHttpCacheGuard } from '../httpCacheGuard';
-import { httpRequest } from './mocks.spec';
+import { httpRequest } from './mocks/mocks';
 
 describe('DefaultHttpCacheGuard', () => {
   let defaultHttpCache: DefaultHttpCacheGuard;

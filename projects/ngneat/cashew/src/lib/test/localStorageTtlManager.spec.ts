@@ -1,6 +1,6 @@
 import { fakeAsync, tick } from '@angular/core/testing';
 import { DefaultTTLManager } from '../ttlManager';
-import { config, localStorageMock } from './mocks.spec';
+import { config, localStorageMock } from './mocks/mocks';
 import { LocalStorageTTLManager } from '../localstorage/localStorageTtlManager';
 
 describe('localStorageTtlManager', () => {

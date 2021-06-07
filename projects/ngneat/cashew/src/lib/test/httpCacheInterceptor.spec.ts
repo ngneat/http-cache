@@ -12,7 +12,7 @@ import {
   ttl,
   cacheBucket,
   CustomHttpParamsCodec
-} from './mocks.spec';
+} from './mocks/mocks';
 
 describe('HttpCacheInterceptor', () => {
   let httpCacheInterceptor: HttpCacheInterceptor;

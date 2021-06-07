@@ -1,6 +1,6 @@
 import { fakeAsync, tick } from '@angular/core/testing';
 import { TTLManager, DefaultTTLManager } from '../ttlManager';
-import { config } from './mocks.spec';
+import { config } from './mocks/mocks';
 
 describe('ttlManager', () => {
   let ttlManager: TTLManager;
